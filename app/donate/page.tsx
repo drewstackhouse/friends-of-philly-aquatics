@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ZeffyEmbed from '@/components/ZeffyEmbed'
 
 export const metadata: Metadata = { title: 'Donate' }
 
@@ -55,51 +56,8 @@ export default function Donate() {
             ))}
           </div>
 
-          {/*
-            ─────────────────────────────────────────────────────────────────
-            DONATION EMBED
-            Replace the placeholder div below with your chosen platform's
-            embed code (Zeffy, Stripe, Donorbox, etc.).
-
-            Zeffy example:
-              <iframe
-                src="https://www.zeffy.com/embed/donation-form/YOUR_FORM_ID"
-                style={{ width: '100%', minHeight: '600px', border: 'none' }}
-                title="Donation form"
-              />
-
-            Donorbox example:
-              <script src="https://donorbox.org/widget.js" paypalExpress="false" />
-              <iframe
-                src="https://donorbox.org/embed/YOUR_CAMPAIGN"
-                ...
-              />
-            ─────────────────────────────────────────────────────────────────
-          */}
-          <div className="border border-dashed border-slate-300 bg-slate-50 min-h-[480px] flex flex-col items-center justify-center gap-5 p-12 text-center mb-12">
-            <svg
-              className="w-10 h-10 text-slate-300"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.25"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-            <div>
-              <p className="text-slate-500 font-semibold mb-1">Donation form coming soon</p>
-              <p className="text-sm text-slate-400 max-w-xs">
-                We&apos;re finalizing our giving platform. In the meantime, reach out below to support our work directly.
-              </p>
-            </div>
-            <a
-              href="mailto:phillyaquatics215@gmail.com?subject=Donation%20Inquiry"
-              className="inline-block bg-blue-700 text-white px-7 py-3 text-sm font-semibold hover:bg-blue-800 transition-colors"
-            >
-              Contact Us to Give
-            </a>
+          <div className="mb-12">
+            <ZeffyEmbed />
           </div>
 
           <div className="border-t border-slate-200 pt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">

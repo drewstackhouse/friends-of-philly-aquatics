@@ -1,0 +1,21 @@
+export default function ZeffyEmbed() {
+  return (
+    <div style={{ position: 'relative', overflow: 'hidden', height: '900px', width: '100%' }}>
+      <iframe
+        title="Donation form powered by Zeffy"
+        src="https://www.zeffy.com/embed/donation-form/keep-phillys-pools-open"
+        style={{
+          position: 'absolute',
+          border: 0,
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          width: '100%',
+          height: '100%',
+        }}
+        allowTransparency={true}
+      />
+    </div>
+  )
+}
